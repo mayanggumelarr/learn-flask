@@ -1,0 +1,81 @@
+/* Background utama */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d5ffc1; /* hijau muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Judul */
+h1 {
+    color: #0b3d0b;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* Container */
+.container {
+    background-color: #ADE256; /* lebih transparan */
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* bayangan biar kotak lebih menonjol */
+    width: 380px;
+    height: 340px;
+    text-align: center;
+    backdrop-filter: blur(6px); /* efek kaca transparan */
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 0 auto; /*auto margin untuk rata tengah*/
+}
+
+/* Input field */
+input[type="number"] {
+    padding: 12px;
+    border: 2px solid #2d6a4f;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+input[type="number"]:focus {
+    border-color: #1b4332;
+    box-shadow: 0 0 5px rgba(27, 67, 50, 0.5);
+}
+
+/* Tombol */
+button {
+    background-color: #428C25;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #2B6514;
+}
+
+/* Hasil BMI */
+p {
+    font-size: 1.3rem;
+    margin-top: 25px;
+    font-weight: bold;
+    color: #0b3d0b;
+    text-align: center;
+}
+

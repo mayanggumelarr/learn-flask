@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI Counter</title>
+        <link rel="stylesheet" href="/static/bmi.css">
+</head>
+<body>
+    <h1>Ayo hitung BMI Kamu!</h1>
+    
+    <div class="container">
+            <!-- Form Input User -->
+            <form method="POST" action="/">
+                    <label for="berat_badan">Berat Badan (kg): </label>
+                    <input type="number" id="berat_badan" name="berat_badan" required min="1" max="500">
+                    <label for="tinggi_badan">Tinggi Badan (m)</label>
+                    <input type="number" id="tinggi_badan" name="tinggi_badan" step="0.01" required>
+                    <button type="submit">Hitung</button>
+            </form>
+            
+            {%if bmi is not none and bmi > 0%}
+                    <p>BMI Anda: {{ "%.1f"|format(bmi) }}</p>
+                    
+                            {%if bmi < 18.5%}
+                                    <p>OOPS! Kamu Underweight</p>
+                            {%elif bmi >= 18.5 and bmi <= 24.9%}
+                                    <p>YES! BMI Kamu Normal</p>
+                            {%elif  bmi > 24.9%}
+                                    <p>OOPS! Kamu Overweight</p>
+                             {%endif%}
+                             
+            {%elif bmi is not none and bmi <= 0%}
+                    <p>Inputkan angka valid</p>
+            {%endif%}
+    </div>
+
+    
+    
+
+</body>
+</html>
